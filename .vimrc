@@ -15,6 +15,7 @@ set nobackup
 set nowritebackup
 set nowrap
 set colorcolumn=80
+set textwidth=78
 
 " indentation options
 set shiftwidth=2
