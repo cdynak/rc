@@ -1,6 +1,12 @@
 PS1='\t\$ '
 alias vim="vim -u ~/.vimrc"
 
+docker-cleanall() {                                                             
+  docker rm -f $(docker ps -a -q)                                               
+  docker rmi -f $(docker images -a -q)                                          
+  docker volume rm -f $(docker volume ls)                                       
+}
+
 # lazyload nvm
 # all props goes to http://broken-by.me/lazy-load-nvm/
 # grabbed from reddit @
